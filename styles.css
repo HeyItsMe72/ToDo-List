@@ -1,0 +1,151 @@
+html, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #ff1fa2b8;
+}
+
+footer {
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  text-align: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+span {
+    position: absolute;
+    right: 2rem;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: #666666b9;
+}
+
+span:hover {
+    background-color: #d9d9d9b9;
+    color:  rgb(245, 80, 20);
+}
+
+#newTaskInput, #newTaskSubmit {
+    border-radius: 5px;
+    padding: 10px;
+    width: 90%;
+    border: none;
+    border-radius: 25px;
+    background-color: transparent;
+
+}
+
+#newTaskSubmit {
+ width: 10%;
+ background-color: rgb(245, 80, 20);
+ color: azure;
+ left: 10rem;
+}
+
+#newTaskSubmit:hover {
+    cursor: pointer;
+    background-color: #ff1fa2;
+}
+
+.check{
+    appearance: none;
+    margin: 5px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: #9e9c9cb9;
+}
+
+.container {
+    width: 100%;
+    padding: 10px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff1fa2, #8349ff, #0011E0, #00f0ff);
+}
+
+.list-content li.checked::before {
+    background-color: rgba(245, 80, 20, 0.757);
+    background-image: url(assets/check.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.list-content li {
+    position: relative;
+    list-style: none;
+    margin: 10px;
+    cursor: pointer;
+    padding: 12px 8px 12px 32px;
+}
+
+.list-content li::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #d9d9d9b9;
+    top: 12px;
+    left: 0;
+    border-radius: 50%;
+    background-position: center;
+}
+ 
+.list-content li:hover {
+    color:rgb(245, 80, 20);
+}
+
+.todo-app {
+    margin: 8rem auto 15rem;
+    padding: 2rem;
+    background-color: #fff;
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+.todo-app h1, .todo-app img {
+    color: #0011E0;
+    display: inline-flex;
+}
+
+.todo-app h1 {
+    margin-bottom: 2rem;
+}
+
+.todo-app img {
+    max-width: 30px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d9d9d9b9;
+    border-radius: 25px;
+    width: 100%;
+
+}
+
+
+
+@media (max-width: 1098px) {
+    #newTaskSubmit{
+        width: 30%;
+    }
+}
