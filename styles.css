@@ -10,12 +10,17 @@ a {
     color: #ff1fa2b8;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff1fa2, #8349ff, #0011E0, #00f0ff);
+    min-height: 100vh;
+}
+
 footer {
   padding: 1rem;
-  position: absolute;
-  bottom: 0;
-  right: 50%;
-  transform: translateX(50%);
   text-align: center;
 }
 
@@ -24,11 +29,10 @@ input:focus {
 }
 
 span {
-    position: absolute;
-    right: 2rem;
     border-radius: 50%;
     width: 20px;
     height: 20px;
+    padding: 0 5px;
     text-align: center;
     color: #666666b9;
 }
@@ -49,7 +53,7 @@ span:hover {
 }
 
 #newTaskSubmit {
- width: 10%;
+ width: 20%;
  background-color: rgb(245, 80, 20);
  color: azure;
  left: 10rem;
@@ -73,10 +77,11 @@ span:hover {
 }
 
 .container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
     width: 100%;
     padding: 10px;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #ff1fa2, #8349ff, #0011E0, #00f0ff);
 }
 
 .list-content li.checked::before {
@@ -88,7 +93,12 @@ span:hover {
 
 .list-content li {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     list-style: none;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
     margin: 10px;
     cursor: pointer;
     padding: 12px 8px 12px 32px;
@@ -111,10 +121,10 @@ span:hover {
 }
 
 .todo-app {
-    margin: 8rem auto 15rem;
+    margin: 0 auto;
     padding: 2rem;
     background-color: #fff;
-    max-width: 50%;
+    max-width: 70%;
     border-radius: 10px;
 }
 
@@ -139,13 +149,7 @@ span:hover {
     background-color: #d9d9d9b9;
     border-radius: 25px;
     width: 100%;
-
 }
 
 
 
-@media (max-width: 1098px) {
-    #newTaskSubmit{
-        width: 30%;
-    }
-}
